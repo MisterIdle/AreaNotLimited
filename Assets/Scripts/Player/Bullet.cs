@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 10f;
     public float lifeTime = 5f;
+    private float speedBullet = 10f;
 
     void Awake()
     {
@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * speedBullet * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
